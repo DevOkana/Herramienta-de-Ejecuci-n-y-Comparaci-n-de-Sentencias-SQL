@@ -4,7 +4,6 @@ from module.ScriptSQL import ConnectMysql, ExtractScriptSQL
 import config.config as config
 from module.CompareExit import CreateFolder, ruta
 
-
 def init(mostrar_sentencias, mostrar_salida, mostrar_sentencias_archivo, cifrar, password, ruta_archivo):
     con = ConnectMysql(config.host, config.username, config.root_password, config.database)
     salida = CreateFolder()
@@ -31,7 +30,7 @@ def init(mostrar_sentencias, mostrar_salida, mostrar_sentencias_archivo, cifrar,
 
 
 if __name__ == "__main__":
-    ruta_archivo = "C:/Users/figue/Downloads/Caso_Practico_2024_BBDD.sql"
+    ruta_archivo = ruta(os.getcwd(),"Caso_Practico_2024_BBDD.sql")
     print("Ruta por defecto:", ruta_archivo)
 
     ruta_personalizada = input(
