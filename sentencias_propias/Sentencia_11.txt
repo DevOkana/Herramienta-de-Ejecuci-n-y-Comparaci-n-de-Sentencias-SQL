@@ -1,4 +1,0 @@
-('Madrid', 4)
-('Valencia', 2)
-('Barcelona', 2)
-('Sevilla', 2)

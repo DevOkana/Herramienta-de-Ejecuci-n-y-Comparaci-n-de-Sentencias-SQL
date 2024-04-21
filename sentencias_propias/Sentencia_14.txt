@@ -1,7 +1,0 @@
-('Carmen', 'Ruiz', 'Madrid', 3)
-('Sof√\xada', 'P√©rez', 'Madrid', 6)
-('Carlos', 'Jim√©nez', 'Barcelona', 6)
-('Ana', 'Garc√\xada', 'Valencia', 3)
-('Marta', 'L√≥pez', 'Valencia', 4)
-('Antonio', 'Garc√\xada', 'Sevilla', 4)
-('Beatriz', 'Vega', 'Madrid', 4)

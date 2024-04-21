@@ -1,3 +1,0 @@
-('R025', 'H005', datetime.date(2024, 4, 15), datetime.date(2024, 5, 1), Decimal('6'))
-('R041', 'H004', datetime.date(2024, 4, 6), datetime.date(2024, 5, 5), Decimal('10'))
-('R033', 'H001', datetime.date(2024, 4, 14), datetime.date(2024, 5, 10), Decimal('5'))

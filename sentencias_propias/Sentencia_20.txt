@@ -1,3 +1,0 @@
-('R033', 'Hotel Sol', 'Madrid', 'Sof√\xada', 'P√©rez', datetime.date(2024, 5, 10), Decimal('5'), Decimal('1'), Decimal('2'), Decimal('1'), Decimal('110.00'))
-('R041', 'Hotel Cometa', 'Sevilla', 'Antonio', 'Garc√\xada', datetime.date(2024, 5, 5), Decimal('10'), Decimal('2'), Decimal('2'), Decimal('2'), Decimal('80.00'))
-('R025', 'Hotel Galaxia', 'Madrid', 'Beatriz', 'Vega', datetime.date(2024, 5, 1), Decimal('6'), Decimal('2'), Decimal('2'), Decimal('2'), Decimal('95.00'))

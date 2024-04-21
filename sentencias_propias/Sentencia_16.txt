@@ -1,2 +1,0 @@
-('Hotel Cometa', 2023, 12, Decimal('3.3333'))
-('Hotel Cometa', 2023, 5, Decimal('3.3333'))
