@@ -50,11 +50,25 @@ database = "Cadena_hotelera" # Base de datos por defecto a utilizar
 ```
 ## Uso
 
-Ejecuta el script `main.py` para utilizar la herramienta. Asegúrate de tener un archivo `.sql` con las sentencias que deseas ejecutar en la base de datos MySQL.
+Este script está diseñado para guardar únicamente las sentencias que devuelven datos. Si una sentencia se ejecuta pero no devuelve ningún resultado, los datos no se guardarán.
+
+Para utilizar la herramienta, sigue estos pasos:
+
+1. Asegúrate de tener un archivo `.sql` con las sentencias que deseas ejecutar en la base de datos MySQL.
+
+2. Ejecuta el script `main.py`. Puedes hacerlo utilizando el siguiente comando en tu terminal:
 
 ```bash
 python main.py
 ```
+
+3. Sigue las instrucciones proporcionadas por la herramienta. Se te pedirá que ingreses la ruta del archivo `.sql` que contiene las sentencias que deseas ejecutar.
+
+4. Una vez que hayas ingresado la ruta del archivo y confirmado las opciones según tus preferencias, la herramienta ejecutará las sentencias y guardará los datos devueltos si corresponde.
+
+5. Verifica la salida generada para asegurarte de que los datos se hayan guardado correctamente y de acuerdo a tus expectativas.
+
+6. Si deseas realizar comparaciones entre las salidas generadas y las salidas esperadas, sigue las indicaciones proporcionadas por la herramienta para llevar a cabo esta tarea.
 
 ## Módulos
 
