@@ -7,8 +7,10 @@ def comparar_archivos(archivo1, archivo2, depurar=False):
     encontrado = False
     with open(archivo1, 'r') as f1, open(archivo2, 'r') as f2:
         for linea1 in f1:
-            if linea1 == "La consulta es :":
-                linea1 = f1.readlines()[3:]  # Empezar desde la cuarta línea
+            if linea1.strip() == "La consulta es :":
+                for _ in range(2):
+                    next(f1)  # Empezar desde la cuarta línea
+                continue
             tupla1 = eval(linea1)
             if depurar:
                 print(f"-------------- Nueva Línea ------------")
@@ -19,8 +21,10 @@ def comparar_archivos(archivo1, archivo2, depurar=False):
                     print(f"--------------Linea número {x}------------")
                 encontrado_en_linea = False
                 for linea2 in f2:
-                    if linea2 == "La consulta es :":
-                        linea2 = f2.readlines()[3:]  # Empezar desde la cuarta línea
+                    if linea2.strip() == "La consulta es :":
+                        for _ in range(2):
+                            next(f2)  # Empezar desde la cuarta línea
+                        continue
                     tupla2 = eval(linea2)
                     if elemento_a_buscar in tupla2:
                         encontrado_en_linea = True
