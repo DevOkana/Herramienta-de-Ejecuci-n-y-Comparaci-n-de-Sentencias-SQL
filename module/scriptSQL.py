@@ -1,5 +1,8 @@
 #Connecto SQL
 import mysql.connector
+import re
+
+import sqlparse
 
 
 class ConnectMysql:
@@ -24,3 +27,34 @@ class ConnectMysql:
         for x in myresult:
             print(x)
 
+class ExtactScriptSQL:
+    def leer_sentencias_sql(ruta_achivo):
+        # Lista para almacenar las sentencias SQL
+        sentencias_sql = []
+
+        # Abre el archivo .sql en modo lectura
+        with open(ruta_achivo, 'r') as file:
+            # Lee todo el contenido del archivo
+            sql_content = file.read()
+            # Elimina comentarios de una línea
+            sql_content = re.sub(r'(--.*)', '', sql_content)
+            # Elimina comentarios de varias líneas
+            sql_content = re.sub(r'(/\*.*?\*/)', '', sql_content, flags=re.DOTALL)
+            # Elimina líneas que contienen solo "--------------------"
+            sql_content = re.sub(r'-{20,}', '', sql_content)
+            # Divide el contenido en líneas
+            lines = sql_content.split('\n')
+
+            # Filtra las líneas vacías y las que contienen solo comentarios
+            lines = [line.strip() for line in lines if line.strip() and not line.strip().startswith('#')]
+
+            # Reconstruye el contenido sin las líneas eliminadas
+            sql_content = '\n'.join(lines)
+            # Divide el contenido en sentencias SQL
+            parsed_sql = sqlparse.split(sql_content)
+            # Recorre cada sentencia SQL parseada
+            for sql_statement in parsed_sql:
+                # Agrega la sentencia a la lista
+                sentencias_sql.append(sql_statement.strip())
+
+        return sentencias_sql
