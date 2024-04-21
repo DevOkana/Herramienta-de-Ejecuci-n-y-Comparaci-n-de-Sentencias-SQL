@@ -48,19 +48,6 @@ username = "root" # Cambiar por el usuario de la base de datos
 root_password = "12345678" # Cambiar por la contraseña del usuario
 database = "Cadena_hotelera" # Base de datos por defecto a utilizar
 ```
-
-## Términos y Condiciones
-
-1. **Responsabilidad del Usuario**: El usuario asume la responsabilidad total de la utilización de este código. Se advierte que este código puede contener información sensible relacionada con casos prácticos específicos. Por lo tanto, el usuario debe leer detenidamente las instrucciones y los menús proporcionados, y se le insta a no compartir las sentencias SQL con terceros. Si el usuario decide compartir el código, se le recomienda encarecidamente revisar la salida generada para garantizar la seguridad y la integridad de los datos. 
-
-2. **Plagio y Uso Inapropiado**: El autor de este código no se hace responsable del plagio u otros usos inapropiados que puedan surgir del uso de este código. Se prohíbe estrictamente el plagio, la distribución no autorizada o cualquier otro uso inapropiado del código y sus resultados. 
-
-3. **Seguridad de los Datos**: Se hace hincapié en la importancia de la seguridad de los datos. En caso de compartir el código con otros usuarios, se recomienda encarecidamente no incluir las sentencias SQL que puedan contener datos sensibles. El autor no se hace responsable de cualquier divulgación no autorizada de datos sensibles que pueda surgir del uso de este código.
-
-4. **Contraseñas y Encriptación**: En caso de optar por encriptar las sentencias SQL, se debe tener en cuenta que el proceso de encriptación se realiza con el fin de garantizar la seguridad de los datos. Se recomienda encarecidamente utilizar contraseñas seguras y mantenerlas confidenciales. El autor no se hace responsable de la pérdida o divulgación de contraseñas utilizadas en el proceso de encriptación.
-
-5. **Aceptación de los Términos**: El uso de este código implica la aceptación de los términos y condiciones establecidos anteriormente. Cualquier violación de estos términos puede dar lugar a acciones legales y responsabilidades civiles.
-
 ## Uso
 
 Ejecuta el script `main.py` para utilizar la herramienta. Asegúrate de tener un archivo `.sql` con las sentencias que deseas ejecutar en la base de datos MySQL.
@@ -119,6 +106,20 @@ Se pedirán una serie de parámetros para completar el correcto funcionamiento:
 4. En caso de escoger sí, por temas de seguridad y para evitar problemas de que se pueda enviar la salida con la sentencia, se encriptarán las sentencias con una contraseña que se pedirá por pantalla. Por defecto, se encriptará. Si se escoge 'A/a', se generará una contraseña aleatoria. Si escoges introducir la contraseña, deberá tener más de 8 caracteres.
 
 5. Cuando termine de recrear todas las salidas, pedirá si deseas comprobar las salidas generadas con las salidas a comparar, que han sido las que previamente se han generado por las sentencias de otras personas para ver si las salidas son iguales.
+
+
+## Términos y Condiciones
+
+1. **Responsabilidad del Usuario**: El usuario asume la responsabilidad total de la utilización de este código. Se advierte que este código puede contener información sensible relacionada con casos prácticos específicos. Por lo tanto, el usuario debe leer detenidamente las instrucciones y los menús proporcionados, y se le insta a no compartir las sentencias SQL con terceros. Si el usuario decide compartir el código, se le recomienda encarecidamente revisar la salida generada para garantizar la seguridad y la integridad de los datos. 
+
+2. **Plagio y Uso Inapropiado**: El autor de este código no se hace responsable del plagio u otros usos inapropiados que puedan surgir del uso de este código. Se prohíbe estrictamente el plagio, la distribución no autorizada o cualquier otro uso inapropiado del código y sus resultados. 
+
+3. **Seguridad de los Datos**: Se hace hincapié en la importancia de la seguridad de los datos. En caso de compartir el código con otros usuarios, se recomienda encarecidamente no incluir las sentencias SQL que puedan contener datos sensibles. El autor no se hace responsable de cualquier divulgación no autorizada de datos sensibles que pueda surgir del uso de este código.
+
+4. **Contraseñas y Encriptación**: En caso de optar por encriptar las sentencias SQL, se debe tener en cuenta que el proceso de encriptación se realiza con el fin de garantizar la seguridad de los datos. Se recomienda encarecidamente utilizar contraseñas seguras y mantenerlas confidenciales. El autor no se hace responsable de la pérdida o divulgación de contraseñas utilizadas en el proceso de encriptación.
+
+5. **Aceptación de los Términos**: El uso de este código implica la aceptación de los términos y condiciones establecidos anteriormente. Cualquier violación de estos términos puede dar lugar a acciones legales y responsabilidades civiles.
+
 
 ## Contribuciones
 
