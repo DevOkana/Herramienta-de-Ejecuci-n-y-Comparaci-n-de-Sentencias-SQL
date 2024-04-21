@@ -19,15 +19,20 @@ class ConnectMysql:
         self.password = password
         self.database = database
     def connect(self):
-        self.mydb = mysql.connector.connect(host=self.host,user=self.user,password=self.password, database=self.database)
+        try:
+            self.mydb = mysql.connector.connect(host=self.host,user=self.user,password=self.password, database=self.database)
+        except mysql.connector.errors.ProgrammingError as _:
+            self.mydb = mysql.connector.connect(host=self.host, user=self.user, password=self.password)
+            mycursor = self.mydb.cursor()
+            mycursor.execute(f"CREATE DATABASE {self.database}")
+
     def execute(self, sql):
         mycursor = self.mydb.cursor()
         mycursor.execute(sql)
         myresult = mycursor.fetchall()
-        for x in myresult:
-            print(x)
+        return myresult
 
-class ExtactScriptSQL:
+class ExtractScriptSQL:
     def leer_sentencias_sql(ruta_achivo):
         # Lista para almacenar las sentencias SQL
         sentencias_sql = []
@@ -37,11 +42,16 @@ class ExtactScriptSQL:
             # Lee todo el contenido del archivo
             sql_content = file.read()
             # Elimina comentarios de una línea
+
             sql_content = re.sub(r'(--.*)', '', sql_content)
+
             # Elimina comentarios de varias líneas
             sql_content = re.sub(r'(/\*.*?\*/)', '', sql_content, flags=re.DOTALL)
             # Elimina líneas que contienen solo "--------------------"
             sql_content = re.sub(r'-{20,}', '', sql_content)
+            sql_content = re.sub(r'(--.*)', '', sql_content)
+            sql_content = re.sub(r'DELIMITER\s*//', '', sql_content, flags=re.IGNORECASE)
+            sql_content = re.sub(r'\s*//\s*DELIMITER\s*;', '', sql_content)
             # Divide el contenido en líneas
             lines = sql_content.split('\n')
 

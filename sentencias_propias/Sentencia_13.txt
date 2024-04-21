@@ -1,0 +1,5 @@
+('H001', 'Hotel Sol', Decimal('3090.00'))
+('H002', 'Hotel Luna', Decimal('4280.00'))
+('H003', 'Hotel Estrella', Decimal('955.00'))
+('H004', 'Hotel Cometa', Decimal('1950.00'))
+('H005', 'Hotel Galaxia', Decimal('4080.00'))
