@@ -1,0 +1,4 @@
+('Hotel Sol', datetime.date(2000, 5, 20), 'SofÃ\xada', datetime.date(2024, 5, 10))
+('Hotel Luna', datetime.date(2010, 6, 15), 'Jorge', datetime.date(2023, 6, 5))
+('Hotel Luna', datetime.date(2010, 6, 15), 'Carlos', datetime.date(2024, 6, 15))
+('Hotel Estrella', datetime.date(2015, 3, 30), 'Marta', datetime.date(2024, 3, 10))

@@ -1,0 +1,5 @@
+('Hotel Luna', Decimal('5'), Decimal('153.000000'))
+('Hotel Sol', Decimal('4'), Decimal('115.454545'))
+('Hotel Galaxia', Decimal('4'), Decimal('101.428571'))
+('Hotel Estrella', Decimal('3'), Decimal('86.250000'))
+('Hotel Cometa', Decimal('2'), Decimal('71.875000'))

@@ -1,0 +1,3 @@
+('Hotel Sol', 'Madrid', Decimal('4'), 'H001')
+('Hotel Luna', 'Barcelona', Decimal('5'), 'H002')
+('Hotel Galaxia', 'Madrid', Decimal('4'), 'H005')
