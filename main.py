@@ -11,6 +11,7 @@ def init(mostrar_sentencias, mostrar_salida, mostrar_sentencias_archivo, cifrar,
     try:
         sentencias = ExtractScriptSQL.leer_sentencias_sql(ruta_archivo)
 
+        sentencias_con = 3
 
         if sentencias:
             for idx, sentencia in enumerate(sentencias, start=1):
@@ -18,11 +19,13 @@ def init(mostrar_sentencias, mostrar_salida, mostrar_sentencias_archivo, cifrar,
                     print(f"---------Sentencia {idx}:---------")
                     print(sentencia)
                 datos = con.execute(sentencia)
+                if idx > 9:
+                    sentencias_con += 1
                 if mostrar_salida:
                     if datos:
                         print("---------DATOS---------")
                         print(datos)
-                salida.consultas(f"Sentencia_{idx}", sentencia, datos, cifrar, password, mostrar_sentencias_archivo)
+                salida.consultas(f"Sentencia_{idx}", sentencia, datos, cifrar, password, mostrar_sentencias_archivo,sentencias_con)
         else:
             print("---------No hay sentencias--------")
     except FileNotFoundError as e:
@@ -31,6 +34,7 @@ def init(mostrar_sentencias, mostrar_salida, mostrar_sentencias_archivo, cifrar,
 
 if __name__ == "__main__":
     ruta_archivo = ruta(os.getcwd(),"Caso_Practico_2024_BBDD.sql")
+    
     print("Ruta por defecto:", ruta_archivo)
 
     ruta_personalizada = input(
@@ -75,7 +79,7 @@ if __name__ == "__main__":
                 password = input("Debes introducir una contraseña de más de 8 caracteres: ")
     else:
         mostrar_sentencias_archivo = False
-
+   
     # Llamar a la función init con los parámetros adecuados
     init(m_sentencias == "S", e_sentencias == "S", mostrar_sentencias_archivo, cifrar, password, ruta_archivo)
     entrada = input("Se ha terminado de general, ¿Quieres comparar los resultados con los base(S/N)?:")
@@ -88,7 +92,11 @@ if __name__ == "__main__":
             Iterar entre los carpetas el primer parametro son son 
             los archivos base a comparar, los gen son los generados actualmente por el script
         """
-        for x in range(len(comp)):
-            comparar_archivos(gen[x],comp[x])
+        for x in range(len(comp)):    
+            try:
+
+                comparar_archivos(gen[x],comp[x])
+            except IndexError as e:
+                print(f"Hay columnas de más en las tablas generadas ERROR: {e}")
     else:
         exit()

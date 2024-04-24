@@ -2,12 +2,15 @@ import os
 import shutil
 from module import Encriptamiento
 
+
+
 def ruta(principal, secundario):
     print(os.path.join(principal, secundario))
     return os.path.join(principal, secundario)
 
 
 class CreateFolder:
+    
     nombre_carpeta = 'sentencias_generadas'
     ruta_carpeta = ruta(os.getcwd(), nombre_carpeta)
 
@@ -29,10 +32,12 @@ class CreateFolder:
             print(f"Error al crear el directorio '{self.nombre_carpeta}': {e}")
 
 
-    def consultas(self, nombre, consulta, datos,cifrar,password,m_sentencias_archivo):
+    def consultas(self, nombre, consulta, datos,cifrar,password,m_sentencias_archivo,sentencias):
+
         if datos:
-            ruta_fichero = ruta(self.ruta_carpeta, nombre+'.txt')
-            with open(ruta_fichero,'w') as f:
+            ruta_fichero = ruta(self.ruta_carpeta, nombre+"_APARTADO_"+ str(sentencias)+'.txt')
+           
+            with open(ruta_fichero,'w',encoding='utf-8') as f:
                 if m_sentencias_archivo:
                     if cifrar:
                         sentencia = str(Encriptamiento.encriptar(password,consulta.replace('\n', ' ')))

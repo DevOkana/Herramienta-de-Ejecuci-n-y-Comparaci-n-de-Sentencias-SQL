@@ -36,7 +36,7 @@ class ExtractScriptSQL:
         sentencias_sql = []
 
         # Abre el archivo .sql en modo lectura
-        with open(ruta_achivo, 'r') as file:
+        with open(ruta_achivo, 'r', encoding='utf-8',) as file:
             # Lee todo el contenido del archivo
             try:
                 sql_content = file.read()
