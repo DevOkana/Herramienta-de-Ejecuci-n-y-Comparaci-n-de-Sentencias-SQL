@@ -39,6 +39,8 @@ if __name__ == "__main__":
 
     ruta_personalizada = input(
         "Introduce la ruta del archivo .sql para la base de datos o deja en blanco para usar la ruta por defecto:\n")
+    ruta_personalizada = ruta_personalizada.replace('"', '')
+    print(ruta_personalizada)
     if ruta_personalizada:
         ruta_archivo = ruta_personalizada
 
