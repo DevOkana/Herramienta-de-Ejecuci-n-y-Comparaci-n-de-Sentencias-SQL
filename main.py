@@ -1,6 +1,6 @@
 from module.Comparar import listarArchivos, comparar_archivos
 from module.Encriptamiento import *
-from module.ScriptSQL import ConnectMysql, ExtractScriptSQL
+from module.ScriptSQL_extract import ConnectMysql, ExtractScriptSQL
 import config.config as config
 from module.CompareExit import CreateFolder, ruta
 
