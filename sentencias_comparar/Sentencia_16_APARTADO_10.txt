@@ -1,2 +1,5 @@
+('Hotel Sol', 2023, 4, Decimal('3.0000'))
+('Hotel Estrella', 2023, 5, Decimal('6.0000'))
 ('Hotel Cometa', 2023, 12, Decimal('3.3333'))
-('Hotel Cometa', 2023, 5, Decimal('3.3333'))
+('Hotel Cometa', 2023, 5, Decimal('6.6667'))
+('Hotel Galaxia', 2023, 7, Decimal('2.5000'))
